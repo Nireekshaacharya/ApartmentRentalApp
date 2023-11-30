@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="10dp"
+tools:context=".Login_page">
+
+<EditText
+    android:id="@+id/username"
+    android:layout_width="373dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:hint="User Name"
+    android:textSize="24sp" />
+
+<EditText
+    android:id="@+id/password"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/username"
+    android:layout_marginTop="275dp"
+    android:hint="Password"
+    android:textSize="24sp" />
+
+<EditText
+    android:id="@+id/repassword"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/password"
+    android:layout_marginTop="27dp"
+    android:hint="Retype Password"
+    android:textSize="24sp" />
+
+
+<Button
+    android:id="@+id/btnsignup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/repassword"
+    android:layout_marginTop="45dp"
+    android:text="Register" />
+
+<Button
+    android:id="@+id/btnsignin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="638dp"
+    android:text="Existing user! Go to Sign in page" />
+
+<EditText
+    android:id="@+id/email_1"
+    android:layout_width="381dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="0dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="523dp"
+    android:ems="10"
+    android:hint="Email_Id"
+    android:inputType="textEmailAddress"
+    android:textSize="24sp" />
+
+<EditText
+    android:id="@+id/Address"
+    android:layout_width="369dp"
+    android:layout_height="66dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="214dp"
+    android:layout_marginEnd="33dp"
+    android:layout_marginBottom="441dp"
+    android:ems="10"
+    android:hint="Address"
+    android:inputType="textPostalAddress"
+    android:textSize="24sp" />
+
+<EditText
+    android:id="@+id/Phone"
+    android:layout_width="384dp"
+    android:layout_height="64dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="309dp"
+    android:layout_marginEnd="17dp"
+    android:layout_marginBottom="348dp"
+    android:ems="10"
+    android:hint="Phone"
+    android:inputType="phone"
+    android:textSize="24sp" />
+
+</RelativeLayout>
