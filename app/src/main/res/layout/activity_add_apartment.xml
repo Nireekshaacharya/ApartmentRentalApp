@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_apartment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <!-- Name -->
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name" />
+
+            <!-- Address -->
+            <EditText
+                android:id="@+id/addressEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address" />
+
+            <!-- Location -->
+            <EditText
+                android:id="@+id/locationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location" />
+
+            <!-- District -->
+            <EditText
+                android:id="@+id/districtEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="District" />
+
+            <!-- Room -->
+            <EditText
+                android:id="@+id/roomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Room" />
+
+            <!-- Per Month Rent -->
+            <EditText
+                android:id="@+id/rentEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Per Month Rent"
+                android:inputType="number" />
+
+            <!-- Accommodation -->
+            <EditText
+                android:id="@+id/accommodationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Accommodation" />
+
+            <!-- Description -->
+            <EditText
+                android:id="@+id/descriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:inputType="textMultiLine" />
+
+            <!-- Image -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+            <!-- Add Submit Button Here -->
+            <Button
+                android:id="@+id/attachImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Attach Image" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
