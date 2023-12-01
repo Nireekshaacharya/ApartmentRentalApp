@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Ganapa</string>
     <string name="open">Open Navigation Drawer</string>
-    <string name="close">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
 </resources>
