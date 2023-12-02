@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
   NavigationView navigationView;
   ActionBarDrawerToggle drawerToggle;
 
-  RecyclerView recyclerView;
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(drawerToggle.onOptionsItemSelected(item)){
@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.nav_view);
         Toolbar toolbar = findViewById(R.id.toolbar);  // Reference the Toolbar
         setSupportActionBar(toolbar);  // Set Toolbar as the support action bar
-        recyclerView=findViewById(R.id.recview);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(drawerToggle);
