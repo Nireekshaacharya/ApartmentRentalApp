@@ -1,6 +1,8 @@
 package com.example.ganapa;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -96,11 +98,15 @@ public class Add_apartment extends AppCompatActivity {
 
         if (isInserted) {
             Toast.makeText(this, "Apartment added successfully", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
             
         } else {
             Toast.makeText(this, "Failed to add apartment", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void startActivity(Context applicationContext, Class<MainActivity> mainActivityClass) {
     }
 
     @Override
@@ -117,4 +123,5 @@ public class Add_apartment extends AppCompatActivity {
             }
         }
     }
+
 }
