@@ -42,15 +42,7 @@ tools:context=".Login_page">
     android:layout_marginTop="45dp"
     android:text="Register" />
 
-<Button
-    android:id="@+id/btnsignin"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_marginTop="638dp"
-    android:text="Existing user! Go to Sign in page" />
-
-<EditText
+    <EditText
     android:id="@+id/email_1"
     android:layout_width="381dp"
     android:layout_height="wrap_content"
@@ -98,5 +90,19 @@ tools:context=".Login_page">
     android:hint="Phone"
     android:inputType="phone"
     android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_below="@+id/btnsignup"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="57dp"
+        android:text="Already a user? LOGIN" />
 
 </RelativeLayout>

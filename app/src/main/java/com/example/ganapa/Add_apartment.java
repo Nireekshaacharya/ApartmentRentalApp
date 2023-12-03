@@ -100,7 +100,6 @@ public class Add_apartment extends AppCompatActivity {
             Toast.makeText(this, "Apartment added successfully", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
-            
         } else {
             Toast.makeText(this, "Failed to add apartment", Toast.LENGTH_SHORT).show();
         }

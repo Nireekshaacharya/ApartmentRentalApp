@@ -67,10 +67,5 @@ public class DatabaseHelper extends SQLiteOpenHelper  {
 
         return result != -1;
     }
-    public Cursor readalldata(){
-         SQLiteDatabase db=this.getWritableDatabase();
-         String qry="select * from TABLE_NAME order by COL_ID ";
-         Cursor cursor=db.rawQuery(qry,null);
-         return cursor;
-    }
+
 }

@@ -1,31 +1,52 @@
 package com.example.ganapa;
 
+import static com.example.ganapa.R.*;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Login_page extends AppCompatActivity {
     EditText username, password, repassword,email_1,Phone,Address;
-    Button signup, signin;
+    Button signup;
+    TextView tv;
     DBHelper DB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page);
-        username = (EditText) findViewById(R.id.username);
-        password = (EditText) findViewById(R.id.password);
-        repassword = (EditText) findViewById(R.id.repassword);
-        email_1=findViewById(R.id.email_1);
-        Phone=findViewById(R.id.Phone);
-        Address=findViewById(R.id.Address);
-        signup = (Button) findViewById(R.id.btnsignup);
-        signin = (Button) findViewById(R.id.btnsignin);
+        setContentView(layout.activity_login_page);
+        username = (EditText) findViewById(id.username);
+        password = (EditText) findViewById(id.password);
+        repassword = (EditText) findViewById(id.repassword);
+        email_1=findViewById(id.email_1);
+        Phone=findViewById(id.Phone);
+        Address=findViewById(id.Address);
+        signup = (Button) findViewById(id.btnsignup);
         DB = new DBHelper(this);
+        tv=findViewById(id.text_view);
+        String text="Already a user? LOGIN";
+        SpannableString ss=new SpannableString(text);
+        ClickableSpan clickableSpan=new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                Intent intent  = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        };
+        ss.setSpan(clickableSpan,17,21, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        tv.setText(ss);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,12 +81,6 @@ public class Login_page extends AppCompatActivity {
                 } }
         });
 
-        signin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
