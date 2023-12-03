@@ -33,20 +33,13 @@ public class Login_page extends AppCompatActivity {
         email_1=findViewById(id.email_1);
         Phone=findViewById(id.Phone);
         Address=findViewById(id.Address);
+        TextView t2=findViewById(id.text_view);
+
         signup = (Button) findViewById(id.btnsignup);
         DB = new DBHelper(this);
-        tv=findViewById(id.text_view);
-        String text="Already a user? LOGIN";
-        SpannableString ss=new SpannableString(text);
-        ClickableSpan clickableSpan=new ClickableSpan() {
-            @Override
-            public void onClick(@NonNull View widget) {
-                Intent intent  = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(intent);
-            }
-        };
-        ss.setSpan(clickableSpan,17,21, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        tv.setText(ss);
+
+
+
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +73,13 @@ public class Login_page extends AppCompatActivity {
                     }
                 } }
         });
-
+       t2.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent  = new Intent(getApplicationContext(), LoginActivity.class);
+               startActivity(intent);
+           }
+       });
 
     }
 }
